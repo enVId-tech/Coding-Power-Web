@@ -1,9 +1,18 @@
+// DO NOT REMOVE
+import "@/styles/globals.scss";
+
+// Next.js imports
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-import "@/styles/globals.scss";
+
+// Components
 import Navbar from "./_components/navbar";
-import CPL from "@/public/CodingPowerLogo.webp";
+
+// SCSS
 import styles from "@/styles/_components/layout.module.scss";
+
+// Assets
+import CPL from "@/public/CodingPowerLogo.webp";
 
 const Montserrat300 = Montserrat({
   weight: '300',
@@ -12,7 +21,7 @@ const Montserrat300 = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Coding Power Homepage",
+  title: "Coding Power | Home",
   description: "The homepage of the Coding Power website.",
   keywords: ["Coding Power", "Coding", "Power", "Java", "Python", "Classes", "Research", "Next Generation"],
   icons: {
@@ -29,7 +38,7 @@ export default function RootLayout({
     <html lang="en" className={Montserrat300.className}>
       <body>
         <div className={styles.container}>
-          <Navbar />
+          <Navbar activePage="Home" />
           <div className={styles.content}>
             {children}
           </div>

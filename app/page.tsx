@@ -1,7 +1,7 @@
 "use server";
 import styles from "@/styles/homepage.module.scss";
 
-export default async function Page(): Promise<React.JSX.Element> {
+export default async function HomePage(): Promise<React.JSX.Element> {
   return (
     <div className={styles.homepage}>
       <div className={styles.homepageTitle}>
